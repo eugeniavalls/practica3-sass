@@ -1,1 +1,46 @@
+@use "../mixins/pseudo.scss" as *;
 
+.header {
+  position: relative;
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  padding-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.header__link {
+  font-weight: 700;
+  border-bottom: 3px solid var(--color-secundary);
+  color: var(--white);
+  padding: 4px;
+}
+
+.banner {
+  text-align: center;
+}
+
+.header::after {
+  @include pseudo(100%, 480px) {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-bottom-left-radius: 50% 7%;
+    border-bottom-right-radius: 50% 7%;
+    background-color: var(--color-primary);
+  }
+}
+
+.banner-image {
+  position: relative;
+  top: 5rem;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 7rem;
+}
