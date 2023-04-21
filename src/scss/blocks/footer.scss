@@ -1,1 +1,13 @@
-/* ESTILOS DEL FOOTER */
+@use "../mixins/responsive.scss" as *;
+
+.footer {
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+
+  @include responsive(desktop) {
+    padding-bottom: 6.875rem;
+  }
+}

@@ -1,46 +1,108 @@
 @use "../mixins/pseudo.scss" as *;
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/hover.scss" as *;
 
 .header {
   position: relative;
+  overflow: hidden;
 }
 
 .header__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 4rem;
   padding-top: 2rem;
   padding-right: 1rem;
   padding-left: 1rem;
+
+  @include responsive(tablet) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  @include responsive(desktop) {
+    padding-left: 10.3125rem;
+    padding-right: 10.3125rem;
+    padding-top: 3.625rem;
+  }
 }
 
 .header__link {
   font-weight: 700;
-  border-bottom: 3px solid var(--color-secundary);
+  border-bottom: 0.1875rem solid var(--color-secundary);
   color: var(--white);
-  padding: 4px;
+  padding: 0.25rem;
+
+  @include responsive(desktop) {
+    @include hover {
+      color: var(--color-secundary);
+    }
+  }
 }
 
 .banner {
   text-align: center;
+  position: relative;
+
+  &::after {
+    @include pseudo(18.75rem, 18.75rem) {
+      @include responsive(tablet) {
+        background-image: url(../assets/images/bg-pattern-1.svg);
+        background-size: cover;
+        top: -3.125rem;
+        left: -12.5rem;
+      }
+      @include responsive(desktop) {
+        left: -8.125rem;
+      }
+    }
+  }
+
+  &::before {
+    @include pseudo(12.5rem, 12.5rem) {
+      @include responsive(tablet) {
+        background-image: url(../assets/images/bg-pattern-2.svg);
+        background-size: cover;
+        top: 3.125rem;
+        right: -7.5rem;
+      }
+      @include responsive(desktop) {
+        right: -3.75rem;
+      }
+    }
+  }
 }
 
 .header::after {
-  @include pseudo(100%, 480px) {
+  @include pseudo(100%, 30rem) {
     top: 0;
     left: 0;
     z-index: -1;
     border-bottom-left-radius: 50% 7%;
     border-bottom-right-radius: 50% 7%;
     background-color: var(--color-primary);
+
+    @include responsive(desktop) {
+      height: 43.75rem;
+    }
   }
 }
 
 .banner-image {
   position: relative;
-  top: 5rem;
-  width: 320px;
+  top: 80px;
+  width: 20rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 7rem;
+
+  @include responsive(tablet) {
+    width: 31.875rem;
+  }
+
+  @include responsive(desktop) {
+    width: 47.8125rem;
+    margin-bottom: 11rem;
+  }
 }

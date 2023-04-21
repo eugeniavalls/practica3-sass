@@ -1,0 +1,108 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+
+.section {
+  padding: 1rem;
+  padding-top: 6.25rem;
+  background-color: var(--white);
+  position: relative;
+
+  @include responsive(tablet) {
+    padding: 2.5rem;
+    padding-top: 16.875rem;
+  }
+
+  @include responsive(desktop) {
+    padding: 10.3125rem;
+    padding-top: 28.125rem;
+    padding-bottom: 0.625rem;
+  }
+
+  &__image {
+    width: 17.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include responsive(tablet) {
+      margin-left: 0;
+      position: absolute;
+      top: 7.5rem;
+    }
+
+    @include responsive(desktop) {
+      top: 12.5rem;
+      width: 29.6875rem;
+    }
+  }
+}
+
+.card {
+  padding: 2rem;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: -3.125rem;
+  margin-bottom: 4.6875rem;
+
+  @include responsive(tablet) {
+    padding: 3rem 3.5rem;
+    align-items: start;
+    text-align: left;
+    width: 31.875rem;
+    top: 0;
+    right: -10.625rem;
+
+    &::after {
+      @include pseudo(12.5rem, 12.5rem) {
+        background-image: url(../assets/images/bg-pattern-1.svg);
+        background-size: cover;
+        bottom: -6.25rem;
+        right: 1.5rem;
+      }
+
+      @include responsive(desktop) {
+        bottom: -4.375rem;
+        right: 3rem;
+      }
+    }
+  }
+
+  @include responsive(desktop) {
+    padding: 4rem;
+    width: 45.625rem;
+    right: -25rem;
+    top: -5rem;
+  }
+
+  &__title {
+    font-family: "Fraunces", serif;
+    font-size: var(--fraunces-regular);
+    margin: 0;
+    color: var(--white);
+    margin-bottom: 1rem;
+
+    @include responsive(tablet) {
+      font-size: 2.5rem;
+    }
+
+    @include responsive(desktop) {
+      font-size: var(--fraunces-medium);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    line-height: 1.75rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+
+    @include responsive(desktop) {
+      font-size: var(--manrope-regular);
+      margin-bottom: 2rem;
+    }
+  }
+}

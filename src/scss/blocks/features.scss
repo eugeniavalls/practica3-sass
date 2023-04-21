@@ -1,34 +1,111 @@
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/responsive.scss" as *;
+
 .features {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 16px;
+  padding: 1rem;
   gap: 2.5rem;
+
+  @include responsive(desktop) {
+    flex-direction: row;
+  }
+
+  &::after {
+    @include pseudo(100%, 80px) {
+      border-bottom-left-radius: 50% 40%;
+      border-bottom-right-radius: 50% 40%;
+      background-color: var(--color-terciary);
+      bottom: -3.125rem;
+      left: 0;
+
+      @include responsive(tablet) {
+        bottom: -3.125rem;
+        z-index: 1;
+      }
+
+      @include responsive(desktop) {
+        border-bottom-left-radius: 50% 110%;
+        border-bottom-right-radius: 50% 110%;
+        bottom: -4.6875rem;
+        z-index: 1;
+      }
+    }
+  }
+
+  @include responsive(tablet) {
+    padding-left: 6.125rem;
+    padding-right: 6.125rem;
+  }
+
+  @include responsive(desktop) {
+    padding-left: 10.3125rem;
+    padding-right: 10.3125rem;
+  }
+}
+
+.feature {
+  @include responsive(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  @include responsive(desktop) {
+    flex-direction: column;
+  }
+
+  &__info {
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      text-align: left;
+    }
+
+    @include responsive(desktop) {
+      align-items: center;
+      text-align: center;
+    }
+  }
 }
 
 .feature__number {
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Fraunces", serif;
   color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  border: 0.0625rem solid var(--color-primary);
   padding: 0.5rem 1rem;
-  border-radius: 50px;
-  margin-bottom: 24px;
+  border-radius: 3.125rem;
+  margin-bottom: 1.5rem;
 }
 
 .feature__title {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   font-family: "Fraunces", serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   color: var(--color-primary);
+
+  @include responsive(tablet) {
+    margin: 0;
+  }
+
+  @include responsive(desktop) {
+    font-size: var(--fraunces-regular);
+    margin-bottom: 1.75rem;
+  }
 }
 
 .feature__text {
   font-family: "Manrope", sans-serif;
-  line-height: 28px;
+  line-height: 1.75rem;
   color: var(--color-text);
 }
