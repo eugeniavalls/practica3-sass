@@ -1,10 +1,10 @@
 # PRÁCTICA CON METODOLOGÍA BEM Y LENGUAJE SASS
 
-![Imagen del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/IMAGEN-DEL-PROYECTO.jpg?raw=true)
+![Imagen del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/01.png)
 
 ## Ejemplo en vivo
 
-- [Vista en vivo](URL-de-github-pages-de-este-proyecto)
+- [Vista en vivo](https://eugeniavalls.github.io/practica3-sass/)
 
 ## Descripción 📑
 
@@ -30,9 +30,12 @@ Realización de la práctica en responsive para ordenador y móvil realizando ho
 
 Si quieres echar un vistazo al proyecto, te recomiendo:
 
-![Captura del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/CAPTURA-DEL-PROYECTO.jpg?raw=true)
-![Captura del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/CAPTURA-DEL-PROYECTO.jpg?raw=true)
-![Captura del proyecto](https://github.com/eduardofierropro/Portafolio-y-CV/blob/main/CAPTURA-DEL-PROYECTO.jpg?raw=true)
+![Captura del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/02.png)
+![Captura del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/03.png)
+![Captura del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/04.png)
+![Captura del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/05.png)
+![Captura del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/06.png)
+![Captura del proyecto](https://raw.githubusercontent.com/eugeniavalls/practica3-sass/main/src/assets/screenshots/07.png)
 
 ## Autor ✒️
 
